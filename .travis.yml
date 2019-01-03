@@ -7,4 +7,8 @@ node_js:
 os:
   - linux
   - osx
-sudo: false
+matrix:
+  include:
+    # Test the last LTS on Windows as well.
+    - os: windows
+      node_js: 10
